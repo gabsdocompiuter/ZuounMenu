@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.tbUser = new System.Windows.Forms.TextBox();
-            this.tbSenha = new System.Windows.Forms.TextBox();
+            this.tbPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bClose = new System.Windows.Forms.Button();
+            this.bEntrar = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -46,14 +46,14 @@
             this.tbUser.Size = new System.Drawing.Size(183, 28);
             this.tbUser.TabIndex = 1;
             // 
-            // tbSenha
+            // tbPass
             // 
-            this.tbSenha.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.tbSenha.Location = new System.Drawing.Point(19, 117);
-            this.tbSenha.Name = "tbSenha";
-            this.tbSenha.PasswordChar = '●';
-            this.tbSenha.Size = new System.Drawing.Size(183, 28);
-            this.tbSenha.TabIndex = 2;
+            this.tbPass.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.tbPass.Location = new System.Drawing.Point(19, 117);
+            this.tbPass.Name = "tbPass";
+            this.tbPass.PasswordChar = '●';
+            this.tbPass.Size = new System.Drawing.Size(183, 28);
+            this.tbPass.TabIndex = 2;
             // 
             // label1
             // 
@@ -75,32 +75,33 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Senha";
             // 
-            // button1
+            // bClose
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.button1.Location = new System.Drawing.Point(19, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 30);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Sair";
-            this.button1.UseVisualStyleBackColor = false;
+            this.bClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bClose.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.bClose.Location = new System.Drawing.Point(19, 151);
+            this.bClose.Name = "bClose";
+            this.bClose.Size = new System.Drawing.Size(81, 30);
+            this.bClose.TabIndex = 5;
+            this.bClose.Text = "Sair";
+            this.bClose.UseVisualStyleBackColor = false;
+            this.bClose.Click += new System.EventHandler(this.BSair_Click);
             // 
-            // button2
+            // bEntrar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.button2.Location = new System.Drawing.Point(121, 151);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 30);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Entrar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.bEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bEntrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bEntrar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.bEntrar.Location = new System.Drawing.Point(121, 151);
+            this.bEntrar.Name = "bEntrar";
+            this.bEntrar.Size = new System.Drawing.Size(81, 30);
+            this.bEntrar.TabIndex = 3;
+            this.bEntrar.Text = "Entrar";
+            this.bEntrar.UseVisualStyleBackColor = false;
+            this.bEntrar.Click += new System.EventHandler(this.BEntrar_Click);
             // 
             // linkLabel1
             // 
@@ -127,18 +128,19 @@
             // 
             // FrmLogin
             // 
+            this.AcceptButton = this.bEntrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(395, 229);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bEntrar);
+            this.Controls.Add(this.bClose);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbSenha);
+            this.Controls.Add(this.tbPass);
             this.Controls.Add(this.tbUser);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -155,11 +157,11 @@
         #endregion
 
         private System.Windows.Forms.TextBox tbUser;
-        private System.Windows.Forms.TextBox tbSenha;
+        private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bClose;
+        private System.Windows.Forms.Button bEntrar;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label3;
     }

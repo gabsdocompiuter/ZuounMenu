@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -93,9 +94,13 @@ namespace ZuounSystem
 
         #endregion
 
+        private readonly Usuario user;
+
         public FrmLogin()
         {
             InitializeComponent();
+
+            user = new Usuario();
 
             #region BackgroundImage
 
@@ -106,9 +111,31 @@ namespace ZuounSystem
             #endregion
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void BEntrar_Click(object sender, EventArgs e)
         {
+            if (!CamposPreenchidos()) return;
 
+            if (user.UsuarioValido(tbUser.Text, tbPass.Text))
+            {
+                MessageBox.Show("Usuário autorizado");
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha inválidos");
+            }
+        }
+
+        private void BSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private bool CamposPreenchidos()
+        {
+            if (!tbUser.CampoPreenchido("Usuario")) return false;
+            if (!tbPass.CampoPreenchido("Senha")) return false;
+
+            return true;
         }
     }
 }
