@@ -117,7 +117,12 @@ namespace ZuounSystem
 
             if (user.UsuarioValido(tbUser.Text, tbPass.Text))
             {
-                MessageBox.Show("Usuário autorizado");
+                this.Hide();
+
+                FrmMain main = new FrmMain();
+                main.ShowDialog();
+
+                this.Close();
             }
             else
             {
