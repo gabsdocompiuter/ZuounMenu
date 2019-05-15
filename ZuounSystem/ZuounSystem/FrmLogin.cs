@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ControleDeEstoque
+namespace ZuounSystem
 {
     public partial class FrmLogin : Form
     {
@@ -104,6 +104,11 @@ namespace ControleDeEstoque
             this.SetStyle(ControlStyles.ResizeRedraw, true);
 
             #endregion
-        }        
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

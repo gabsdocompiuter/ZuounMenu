@@ -1,4 +1,4 @@
-﻿namespace ControleDeEstoque
+﻿namespace ZuounSystem
 {
     partial class FrmLogin
     {
@@ -100,6 +100,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Entrar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // linkLabel1
             // 
@@ -120,9 +121,9 @@
             this.label3.Location = new System.Drawing.Point(3, 3);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 21);
+            this.label3.Size = new System.Drawing.Size(114, 21);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Zuoun System";
+            this.label3.Text = "ZuounSystem";
             // 
             // FrmLogin
             // 

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeEstoque", "ControleDeEstoque\ControleDeEstoque.csproj", "{9298A56E-313E-42DD-9B85-C1A5B186EB12}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZuounSystem", "ZuounSystem\ZuounSystem.csproj", "{9298A56E-313E-42DD-9B85-C1A5B186EB12}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{510DE9F7-E2E5-49E0-A4F5-08EC322AF49E}"
 EndProject
