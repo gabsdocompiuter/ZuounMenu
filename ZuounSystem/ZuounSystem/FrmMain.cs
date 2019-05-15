@@ -54,7 +54,7 @@ namespace ZuounSystem
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void PBarraSuperior_MouseDown(object sender, MouseEventArgs e)
+        private void ClickToDrag_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -71,6 +71,7 @@ namespace ZuounSystem
             this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
 
+        #region Botões Barra de Tarefas
         private void BMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -80,5 +81,26 @@ namespace ZuounSystem
         {
             this.Close();
         }
+
+        #endregion
+
+        #region Botões de Contato
+
+        private void BSite_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://monteiro.dev");
+        }
+
+        private void BTwitter_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://twitter.com/gmonteeeiro");
+        }
+
+        private void BGithub_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/gmonteeeiro");
+        }
+
+        #endregion
     }
 }

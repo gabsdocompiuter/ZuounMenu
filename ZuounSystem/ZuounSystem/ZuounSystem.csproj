@@ -107,5 +107,20 @@
   <ItemGroup>
     <None Include="Resources\icon_outlined.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_dribbble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_github.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_x%28white%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_outlined%28white%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
