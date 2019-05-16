@@ -102,5 +102,11 @@ namespace ZuounSystem
         }
 
         #endregion
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            MontaMenu menu = new MontaMenu(pMenu, pSubMenu, 40, pMenu.Size.Width, 10);
+            menu.CarregaMenu();
+        }
     }
 }

@@ -31,14 +31,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pBarraSuperior = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.bMinimizar = new System.Windows.Forms.Button();
             this.bFechar = new System.Windows.Forms.Button();
+            this.pMenu = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.bGithub = new System.Windows.Forms.Button();
             this.bTwitter = new System.Windows.Forms.Button();
             this.bSite = new System.Windows.Forms.Button();
+            this.pSubMenu = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.pBarraSuperior.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -84,44 +85,6 @@
             this.pBarraSuperior.TabIndex = 1;
             this.pBarraSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ClickToDrag_MouseDown);
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
-            this.panel3.Location = new System.Drawing.Point(0, 88);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(214, 365);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.bGithub);
-            this.panel4.Controls.Add(this.bTwitter);
-            this.panel4.Controls.Add(this.bSite);
-            this.panel4.Location = new System.Drawing.Point(0, 453);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(214, 50);
-            this.panel4.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(0, 29);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 21);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Desenvolvido por Gabriel Monteiro";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // bMinimizar
             // 
             this.bMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -156,6 +119,44 @@
             this.bFechar.TabIndex = 0;
             this.bFechar.UseVisualStyleBackColor = true;
             this.bFechar.Click += new System.EventHandler(this.BFechar_Click);
+            // 
+            // pMenu
+            // 
+            this.pMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.pMenu.Location = new System.Drawing.Point(0, 88);
+            this.pMenu.Margin = new System.Windows.Forms.Padding(0);
+            this.pMenu.Name = "pMenu";
+            this.pMenu.Size = new System.Drawing.Size(214, 365);
+            this.pMenu.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.bGithub);
+            this.panel4.Controls.Add(this.bTwitter);
+            this.panel4.Controls.Add(this.bSite);
+            this.panel4.Location = new System.Drawing.Point(0, 453);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(214, 50);
+            this.panel4.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label3.Location = new System.Drawing.Point(0, 29);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(214, 21);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Desenvolvido por Gabriel Monteiro";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bGithub
             // 
@@ -208,20 +209,29 @@
             this.bSite.UseVisualStyleBackColor = true;
             this.bSite.Click += new System.EventHandler(this.BSite_Click);
             // 
+            // pSubMenu
+            // 
+            this.pSubMenu.Location = new System.Drawing.Point(214, 27);
+            this.pSubMenu.Name = "pSubMenu";
+            this.pSubMenu.Size = new System.Drawing.Size(546, 423);
+            this.pSubMenu.TabIndex = 2;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(817, 503);
+            this.Controls.Add(this.pSubMenu);
             this.Controls.Add(this.pBarraSuperior);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pMenu);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.panel1.ResumeLayout(false);
             this.pBarraSuperior.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -232,7 +242,7 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pBarraSuperior;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pMenu;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button bFechar;
         private System.Windows.Forms.Button bMinimizar;
@@ -241,5 +251,6 @@
         private System.Windows.Forms.Button bSite;
         private System.Windows.Forms.Button bGithub;
         private System.Windows.Forms.Button bTwitter;
+        private System.Windows.Forms.Panel pSubMenu;
     }
 }
