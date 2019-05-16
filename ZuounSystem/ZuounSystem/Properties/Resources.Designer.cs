@@ -83,6 +83,26 @@ namespace ZuounSystem.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_maximize_white_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_maximize(white)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_miniminize_white_ {
+            get {
+                object obj = ResourceManager.GetObject("icon_miniminize(white)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_outlined {
             get {
                 object obj = ResourceManager.GetObject("icon_outlined", resourceCulture);

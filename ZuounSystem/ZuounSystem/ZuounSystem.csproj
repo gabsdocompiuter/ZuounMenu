@@ -68,6 +68,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util.cs" />
+    <EmbeddedResource Include="Cadastros\FrmCadastroPadrao.resx">
+      <DependentUpon>FrmCadastroPadrao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +130,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_outlined%28white%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_miniminize%28white%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_maximize%28white%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
