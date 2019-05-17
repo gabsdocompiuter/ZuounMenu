@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ZuounSystem
+namespace ZuounSystem.Menu
 {
     public class MontaMenu
     {
@@ -177,6 +177,9 @@ namespace ZuounSystem
 
             Panel icn = pMenu.Controls.Find(pName, false).FirstOrDefault() as Panel;
             icn.Visible = true;
+
+            MontaSubMenu subMenu = new MontaSubMenu(pSubMenu);
+            subMenu.CarregaMenu();
         }
     }
 }
