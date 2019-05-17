@@ -46,30 +46,46 @@ namespace ZuounSystem.Menu
 
             //Quantidade de itens no menu
             int qtd = opcoes.Count;
-
             int qtdOpcoesLinha = wTela / wBtn;
+            int qtdLinhas = qtd / qtdOpcoesLinha;
+            if (qtd % qtdOpcoesLinha != 0) qtdLinhas++;
 
-            //Calculo para centralizar os botões verticalmente
-            int posY1 = (hTela / 2) - (hBtn / 2);
-            int posX1 = (wTela / 2) - (qtd * wBtn / 2);
+            //Calculo para centralizar os botões
+            int iniPosY;
+            int iniPosX;
 
-            for (int i = 0; i < qtd; i++)
+            if (qtd > qtdOpcoesLinha)
             {
-                if (i > qtdOpcoesLinha - 1)
+                iniPosY = (hTela / 2) - (qtdLinhas * hBtn / 2);
+                iniPosX = (wTela / 2) - (qtdOpcoesLinha * wBtn / 2);
+            }
+            else
+            {
+                iniPosY = (hTela / 2) - (hBtn / 2);
+                iniPosX = (wTela / 2) - (qtd * wBtn / 2);
+            }
+
+            for (int i = 0; i < qtdLinhas; i++)
+            {
+                int posY = iniPosY + (i * hBtn);
+
+                int restantes = qtd - (qtdOpcoesLinha * i);
+                if (restantes > qtdOpcoesLinha) restantes = qtdOpcoesLinha;
+
+                for (int j = 0; j < restantes; j++)
                 {
-                    //Calcula novo X e Y
+
+                    int opc = j + i * qtdOpcoesLinha;
+
+                    int posX = iniPosX + (j * hBtn);
+
+                    MenuPrincipalDTO dto = (MenuPrincipalDTO)opcoes[opc];
+                    string nome = dto.Opcao;
+
+                    string btnNome = $"{nome}{j}";
+
+                    AddButton(posY, posX, btnNome, dto.Descricao);
                 }
-
-                //int posY = posY1 + (i * hBtn);
-                int posX = posX1 + (i * hBtn);
-
-                MenuPrincipalDTO dto = (MenuPrincipalDTO)opcoes[i];
-                string nome = dto.Opcao;
-
-                //string icnNome = $"icn{nome}{i}";
-                string btnNome = $"{nome}{i}";
-
-                AddButton(posY1, posX, btnNome, dto.Descricao);
             }
         }
 
@@ -88,6 +104,7 @@ namespace ZuounSystem.Menu
                 Location = new Point(posX, posY),
                 Font = new Font("Microsoft Sans Serif", 10F),
                 BackColor = crBtnSt,
+                ForeColor = Color.White,
                 Name = name,
                 Size = new Size(wBtn, hBtn),
                 TextAlign = ContentAlignment.MiddleLeft,
