@@ -26,6 +26,16 @@ CREATE TABLE IF NOT EXISTS `menu` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
+-- Copiando estrutura para tabela zuounsystem.submenu
+CREATE TABLE IF NOT EXISTS `submenu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(50) NOT NULL,
+  `opcao` varchar(50) NOT NULL,
+  `nivel` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+-- Exportação de dados foi desmarcado.
 -- Copiando estrutura para tabela zuounsystem.usuario
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
