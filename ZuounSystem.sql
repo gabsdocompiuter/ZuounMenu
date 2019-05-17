@@ -16,6 +16,16 @@
 CREATE DATABASE IF NOT EXISTS `zuounsystem` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `zuounsystem`;
 
+-- Copiando estrutura para tabela zuounsystem.menu
+CREATE TABLE IF NOT EXISTS `menu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(50) NOT NULL,
+  `opcao` varchar(50) NOT NULL,
+  `nivel` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+-- Exportação de dados foi desmarcado.
 -- Copiando estrutura para tabela zuounsystem.usuario
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
