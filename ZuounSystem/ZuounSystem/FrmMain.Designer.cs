@@ -211,9 +211,12 @@
             // 
             // pSubMenu
             // 
+            this.pSubMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pSubMenu.Location = new System.Drawing.Point(214, 27);
             this.pSubMenu.Name = "pSubMenu";
-            this.pSubMenu.Size = new System.Drawing.Size(546, 423);
+            this.pSubMenu.Size = new System.Drawing.Size(603, 476);
             this.pSubMenu.TabIndex = 2;
             // 
             // FrmMain
