@@ -37,22 +37,29 @@ namespace ZuounSystem.Menu
         public void CarregaMenu()
         {
             //Obtém as opções do banco de dados
-            MenuPrincipal menu = new MenuPrincipal();
+            SubMenu menu = new SubMenu();
             ArrayList opcoes = menu.GetOpcoes();
 
             //Tamanho da tela
-            int yOpc = pSubMenu.Size.Height;
-            int xOpc = pSubMenu.Size.Width;
+            int hTela = pSubMenu.Size.Height;
+            int wTela = pSubMenu.Size.Width;
 
             //Quantidade de itens no menu
             int qtd = opcoes.Count;
 
+            int qtdOpcoesLinha = wTela / wBtn;
+
             //Calculo para centralizar os botões verticalmente
-            int posY1 = (yOpc / 2) - (hBtn / 2);
-            int posX1 = (xOpc / 2) - (qtd * wBtn / 2);
+            int posY1 = (hTela / 2) - (hBtn / 2);
+            int posX1 = (wTela / 2) - (qtd * wBtn / 2);
 
             for (int i = 0; i < qtd; i++)
             {
+                if (i > qtdOpcoesLinha - 1)
+                {
+                    //Calcula novo X e Y
+                }
+
                 //int posY = posY1 + (i * hBtn);
                 int posX = posX1 + (i * hBtn);
 

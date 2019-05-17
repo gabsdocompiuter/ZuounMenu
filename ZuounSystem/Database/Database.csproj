@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Menu\MenuPrincipal.cs" />
     <Compile Include="Menu\MenuPrincipalDTO.cs" />
+    <Compile Include="Menu\SubMenu.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="MySQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
