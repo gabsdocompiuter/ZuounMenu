@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Database.Menu;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -70,13 +72,15 @@ namespace ZuounSystem
 
         public void CarregaMenu()
         {
+            //Obtém as opções do banco de dados
+            MenuPrincipal menu = new MenuPrincipal();
+            ArrayList opcoes = menu.GetOpcoes();
+
             //Tamanho da tela
             int yOpc = pMenu.Size.Height;
 
             //Quantidade de itens no menu
-            int qtd = 5;
-
-            string nome = "teste";
+            int qtd = opcoes.Count;
 
             //Calculo para centralizar os botões verticalmente
             int pos1 = ((yOpc - qtd * hBtn) / 2) - (hBtn / 2);
@@ -85,11 +89,14 @@ namespace ZuounSystem
             {
                 int pos = pos1 + (i * hBtn);
 
+                MenuPrincipalDTO dto = (MenuPrincipalDTO)opcoes[i];
+                string nome = dto.Opcao;
+
                 string icnNome = $"icn{nome}{i}";
                 string btnNome = $"{nome}{i}";
 
                 AddIcn(pos, icnNome);
-                AddButton(pos, btnNome, "Texto" + i);
+                AddButton(pos, btnNome, dto.Descricao);
             }
         }
 
