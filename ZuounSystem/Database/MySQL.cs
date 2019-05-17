@@ -22,9 +22,9 @@ namespace Database
         public MySQL()
         {
             string ip = "127.0.0.1";
-            string dBase = "militar";
-            string user = "exemplomilitar";
-            string pass = "militar123";
+            string dBase = "zuounsystem";
+            string user = "zuoun";
+            string pass = "1234";
 
             string connString = $@"server={ip};database={dBase};Uid={user};Pwd={pass}";
             Connection = new MySqlConnection(connString);
@@ -115,7 +115,7 @@ namespace Database
         /// </summary>
         /// <param name="sql"></param>
         /// <returns></returns>
-        public bool ExecuteReader(string sql)
+        public void ExecuteReader(string sql)
         {
             PreparaMySQL(sql);
 
@@ -128,8 +128,6 @@ namespace Database
             {
                 throw (new Exception(e.Message));
             }
-
-            return HasRows();
         }
 
         /// <summary>
