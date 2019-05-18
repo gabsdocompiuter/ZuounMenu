@@ -77,12 +77,21 @@ namespace ZuounSystem.Menu
 
                     int opc = j + i * qtdOpcoesLinha;
 
-                    int posX = iniPosX + (j * hBtn);
+                    int posX;
+                    if (restantes < qtdOpcoesLinha)
+                    {
+                        posX = (wTela / 2) - (restantes * wBtn / 2);
+                        posX += j * wBtn;
+                    }
+                    else
+                    {
+                        posX = iniPosX + (j * hBtn);
+                    }
 
                     MenuPrincipalDTO dto = (MenuPrincipalDTO)opcoes[opc];
                     string nome = dto.Opcao;
 
-                    string btnNome = $"{nome}{j}";
+                    string btnNome = $"{nome}{opc}";
 
                     AddButton(posY, posX, btnNome, dto.Descricao);
                 }
