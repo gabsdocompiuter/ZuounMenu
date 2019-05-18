@@ -54,6 +54,7 @@ namespace ZuounSystem.Menu
             int iniPosY;
             int iniPosX;
 
+            //Verifica se precisa mais de uma linha 
             if (qtd > qtdOpcoesLinha)
             {
                 iniPosY = (hTela / 2) - (qtdLinhas * hBtn / 2);
@@ -65,18 +66,24 @@ namespace ZuounSystem.Menu
                 iniPosX = (wTela / 2) - (qtd * wBtn / 2);
             }
 
+            //for para as linhas
             for (int i = 0; i < qtdLinhas; i++)
             {
                 int posY = iniPosY + (i * hBtn);
 
+                //Calculas quantos item terão nessa linha
                 int restantes = qtd - (qtdOpcoesLinha * i);
                 if (restantes > qtdOpcoesLinha) restantes = qtdOpcoesLinha;
 
+                //for para as colunas
                 for (int j = 0; j < restantes; j++)
                 {
 
                     int opc = j + i * qtdOpcoesLinha;
 
+                    /* Verifica se precisa recalcular as posições
+                     * Necessário para quando tiver poucas opções na linha
+                     */
                     int posX;
                     if (restantes < qtdOpcoesLinha)
                     {
