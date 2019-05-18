@@ -25,7 +25,13 @@ CREATE TABLE IF NOT EXISTS `menu` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela zuounsystem.menu: ~2 rows (aproximadamente)
+/*!40000 ALTER TABLE `menu` DISABLE KEYS */;
+INSERT IGNORE INTO `menu` (`id`, `descricao`, `opcao`, `nivel`) VALUES
+	(1, 'Início', 'inicio', 1),
+	(2, 'Cadastros', 'cadastros', 1);
+/*!40000 ALTER TABLE `menu` ENABLE KEYS */;
+
 -- Copiando estrutura para tabela zuounsystem.submenu
 CREATE TABLE IF NOT EXISTS `submenu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -35,7 +41,20 @@ CREATE TABLE IF NOT EXISTS `submenu` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela zuounsystem.submenu: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `submenu` DISABLE KEYS */;
+INSERT IGNORE INTO `submenu` (`id`, `descricao`, `opcao`, `nivel`) VALUES
+	(1, 'Consulta Clientes', 'cliente', NULL),
+	(2, 'Opção 2', 'cliente', NULL),
+	(3, 'Opção 3', 'cliente', NULL),
+	(4, 'Opção 4', 'cliente', NULL),
+	(5, 'Opção 5', 'cliente', NULL),
+	(6, 'Opção 6', 'cliente', NULL),
+	(7, 'Opção 7', 'cliente', NULL),
+	(8, 'Opção 8', 'cliente', NULL),
+	(9, 'Opção 9', 'cliente', NULL);
+/*!40000 ALTER TABLE `submenu` ENABLE KEYS */;
+
 -- Copiando estrutura para tabela zuounsystem.usuario
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -46,7 +65,12 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela zuounsystem.usuario: ~1 rows (aproximadamente)
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT IGNORE INTO `usuario` (`id`, `nome`, `user`, `senha`, `nivel`) VALUES
+	(1, 'Gabriel Monteiro', 'm', 'm', 9);
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
