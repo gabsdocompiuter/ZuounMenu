@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZuounMenu.Properties;
 
 namespace ZuounMenu.Menu
 {
@@ -35,7 +36,7 @@ namespace ZuounMenu.Menu
         public MontaSubMenu(Panel panel)
         {
             pSubMenu = panel;
-            pSubMenu.Controls.Clear();
+            InitializePanel();
         }
 
         public void CarregaMenu(MenuPrincipalDTO pai)
@@ -43,6 +44,12 @@ namespace ZuounMenu.Menu
             //Obtém as opções do banco de dados
             SubMenu menu = new SubMenu();
             ArrayList opcoes = menu.GetOpcoes(pai);
+
+            if (opcoes.Count < 1)
+            {
+                AddBackGroudImage();
+                return;
+            }
 
             //Tamanho da tela
             int hTela = pSubMenu.Size.Height;
@@ -108,6 +115,18 @@ namespace ZuounMenu.Menu
                     AddButton(posY, posX, btnNome, dto.Descricao);
                 }
             }
+        }
+
+        private void AddBackGroudImage()
+        {
+            pSubMenu.BackgroundImage = Resources.startup_593327;
+            pSubMenu.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+
+        private void InitializePanel()
+        {
+            pSubMenu.BackgroundImage = null;
+            pSubMenu.Controls.Clear();
         }
 
         /// <summary>

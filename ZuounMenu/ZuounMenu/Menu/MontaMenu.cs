@@ -180,6 +180,7 @@ namespace ZuounMenu.Menu
             Panel icn = pMenu.Controls.Find(pName, false).FirstOrDefault() as Panel;
             icn.Visible = true;
 
+            //Busca qual a opção selecionada para então buscar subOpções
             int menuSelecionado = -1;
             for (int i = 0; i < opcoes.Count; i++)
             {
