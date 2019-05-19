@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -97,6 +98,7 @@ namespace ZuounSystem.Menu
                         posX = iniPosX + (j * wBtn);
                     }
 
+                    //Pega as informações provinda do banco de dados para mostrar o botão para o usuário
                     MenuPrincipalDTO dto = (MenuPrincipalDTO)opcoes[opc];
                     string nome = dto.Opcao;
 
@@ -146,28 +148,20 @@ namespace ZuounSystem.Menu
         /// <param name="e"></param>
         private void MenuClick(object sender, EventArgs e)
         {
-            //Deixa todos com a cor padrão
-            //foreach (Control c in pSubMenu.Controls)
-            //{
-            //    if (c is Panel)
-            //    {
-            //        c.Visible = false;
-            //    }
+            Button b = (Button)sender;
 
-            //    if (c is Button)
-            //    {
-            //        c.BackColor = pSubMenu.BackColor;
-            //    }
-            //}
+            SubMenuOpcoes opc = new SubMenuOpcoes();
+            Type t = opc.GetType();
+            MethodInfo method = t.GetMethod(b.Name);
 
-            //Button b = (Button)sender;
-            //string pName = "icn" + b.Name;
-
-            //Muda para as novas cores
-            //b.BackColor = crBtnSl;
-
-            //Panel icn = pSubMenu.Controls.Find(pName, false).FirstOrDefault() as Panel;
-            //icn.Visible = true;
+            try
+            {
+                method.Invoke(opc, null);
+            }
+            catch
+            {
+                MessageBox.Show("Esse programa ainda está em fase de desenvolvimento, aguarde uma atualização!");
+            }
         }
 
     }

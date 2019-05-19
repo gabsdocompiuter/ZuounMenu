@@ -61,6 +61,7 @@
     </Compile>
     <Compile Include="Menu\MontaMenu.cs" />
     <Compile Include="Menu\MontaSubMenu.cs" />
+    <Compile Include="Menu\SubMenuOpcoes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util.cs" />
