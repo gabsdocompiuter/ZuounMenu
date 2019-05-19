@@ -16,11 +16,11 @@ namespace Database.Menu
             my = new MySQL();
         }
 
-        public ArrayList GetOpcoes()
+        public ArrayList GetOpcoes(MenuPrincipalDTO pai)
         {
             ArrayList array = new ArrayList();
 
-            string sql = "SELECT * FROM submenu";
+            string sql = $"SELECT * FROM submenu WHERE menuPai = {pai.Id}";
 
             my.ExecuteReader(sql);
 
@@ -28,10 +28,13 @@ namespace Database.Menu
             {
                 while (my.ReadNextRecord())
                 {
-                    MenuPrincipalDTO dto = new MenuPrincipalDTO
+                    SubMenuDTO dto = new SubMenuDTO
                     {
+                        Id = my.GetInt("id"),
+                        MenuPai = pai,
                         Descricao = my.GetString("descricao"),
-                        Opcao = my.GetString("opcao")
+                        Opcao = my.GetString("opcao"),
+                        Nivel = my.GetInt("nivel")
                     };
                     array.Add(dto);
                 }

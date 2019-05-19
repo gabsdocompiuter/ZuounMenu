@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Database.Menu
 {
-    public class MenuPrincipalDTO
+    public class SubMenuDTO
     {
         public int Id { get; set; }
+
+        public MenuPrincipalDTO MenuPai { get; set; }
 
         public string Descricao { get; set; }
 

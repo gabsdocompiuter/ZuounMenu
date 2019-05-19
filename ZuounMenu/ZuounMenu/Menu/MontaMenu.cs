@@ -54,6 +54,8 @@ namespace ZuounMenu.Menu
 
         private readonly Panel pSubMenu;
 
+        private ArrayList opcoes;
+
         /// <summary>
         /// 
         /// </summary>
@@ -74,7 +76,7 @@ namespace ZuounMenu.Menu
         {
             //Obtém as opções do banco de dados
             MenuPrincipal menu = new MenuPrincipal();
-            ArrayList opcoes = menu.GetOpcoes();
+            opcoes = menu.GetOpcoes();
 
             //Tamanho da tela
             int yOpc = pMenu.Size.Height;
@@ -92,8 +94,8 @@ namespace ZuounMenu.Menu
                 MenuPrincipalDTO dto = (MenuPrincipalDTO)opcoes[i];
                 string nome = dto.Opcao;
 
-                string icnNome = $"icn{nome}{i}";
-                string btnNome = $"{nome}{i}";
+                string icnNome = $"icn{nome}";
+                string btnNome = $"{nome}";
 
                 AddIcn(pos, icnNome);
                 AddButton(pos, btnNome, dto.Descricao);
@@ -178,8 +180,18 @@ namespace ZuounMenu.Menu
             Panel icn = pMenu.Controls.Find(pName, false).FirstOrDefault() as Panel;
             icn.Visible = true;
 
+            int menuSelecionado = -1;
+            for (int i = 0; i < opcoes.Count; i++)
+            {
+                MenuPrincipalDTO dto = (MenuPrincipalDTO)opcoes[i];
+                if (dto.Opcao == b.Name)
+                {
+                    menuSelecionado = i;
+                }
+            }
+
             MontaSubMenu subMenu = new MontaSubMenu(pSubMenu);
-            subMenu.CarregaMenu();
+            subMenu.CarregaMenu((MenuPrincipalDTO)opcoes[menuSelecionado]);   
         }
     }
 }

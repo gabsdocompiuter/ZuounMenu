@@ -35,13 +35,14 @@ namespace ZuounMenu.Menu
         public MontaSubMenu(Panel panel)
         {
             pSubMenu = panel;
+            pSubMenu.Controls.Clear();
         }
 
-        public void CarregaMenu()
+        public void CarregaMenu(MenuPrincipalDTO pai)
         {
             //Obtém as opções do banco de dados
             SubMenu menu = new SubMenu();
-            ArrayList opcoes = menu.GetOpcoes();
+            ArrayList opcoes = menu.GetOpcoes(pai);
 
             //Tamanho da tela
             int hTela = pSubMenu.Size.Height;
@@ -99,7 +100,7 @@ namespace ZuounMenu.Menu
                     }
 
                     //Pega as informações provinda do banco de dados para mostrar o botão para o usuário
-                    MenuPrincipalDTO dto = (MenuPrincipalDTO)opcoes[opc];
+                    SubMenuDTO dto = (SubMenuDTO)opcoes[opc];
                     string nome = dto.Opcao;
 
                     string btnNome = $"{nome}";

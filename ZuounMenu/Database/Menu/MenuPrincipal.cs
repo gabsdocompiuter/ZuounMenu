@@ -30,8 +30,10 @@ namespace Database.Menu
                 {
                     MenuPrincipalDTO dto = new MenuPrincipalDTO
                     {
+                        Id = my.GetInt("id"),
                         Descricao = my.GetString("descricao"),
-                        Opcao = my.GetString("opcao")
+                        Opcao = my.GetString("opcao"),
+                        Nivel = my.GetInt("nivel")
                     };
                     array.Add(dto);
                 }
