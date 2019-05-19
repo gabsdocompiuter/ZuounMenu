@@ -100,7 +100,7 @@ namespace ZuounSystem.Menu
                     MenuPrincipalDTO dto = (MenuPrincipalDTO)opcoes[opc];
                     string nome = dto.Opcao;
 
-                    string btnNome = $"{nome}{opc}";
+                    string btnNome = $"{nome}";
 
                     AddButton(posY, posX, btnNome, dto.Descricao);
                 }
