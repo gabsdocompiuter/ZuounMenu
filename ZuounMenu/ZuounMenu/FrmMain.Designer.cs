@@ -1,4 +1,4 @@
-﻿namespace ZuounSystem
+﻿namespace ZuounMenu
 {
     partial class FrmMain
     {
@@ -66,7 +66,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(214, 88);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ZuounSystem";
+            this.label1.Text = "ZuounMenu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ClickToDrag_MouseDown);
             // 
@@ -88,7 +88,7 @@
             // bMinimizar
             // 
             this.bMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bMinimizar.BackgroundImage = global::ZuounSystem.Properties.Resources.icon_outlined_white_;
+            this.bMinimizar.BackgroundImage = global::ZuounMenu.Properties.Resources.icon_outlined_white_;
             this.bMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bMinimizar.FlatAppearance.BorderSize = 0;
             this.bMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -106,7 +106,7 @@
             // bFechar
             // 
             this.bFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bFechar.BackgroundImage = global::ZuounSystem.Properties.Resources.icon_x_white_;
+            this.bFechar.BackgroundImage = global::ZuounMenu.Properties.Resources.icon_x_white_;
             this.bFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bFechar.FlatAppearance.BorderSize = 0;
             this.bFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -161,7 +161,7 @@
             // bGithub
             // 
             this.bGithub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bGithub.BackgroundImage = global::ZuounSystem.Properties.Resources.icon_github;
+            this.bGithub.BackgroundImage = global::ZuounMenu.Properties.Resources.icon_github;
             this.bGithub.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bGithub.FlatAppearance.BorderSize = 0;
             this.bGithub.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -178,7 +178,7 @@
             // bTwitter
             // 
             this.bTwitter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bTwitter.BackgroundImage = global::ZuounSystem.Properties.Resources.icon_twitter;
+            this.bTwitter.BackgroundImage = global::ZuounMenu.Properties.Resources.icon_twitter;
             this.bTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bTwitter.FlatAppearance.BorderSize = 0;
             this.bTwitter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -195,7 +195,7 @@
             // bSite
             // 
             this.bSite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bSite.BackgroundImage = global::ZuounSystem.Properties.Resources.icon_dribbble;
+            this.bSite.BackgroundImage = global::ZuounMenu.Properties.Resources.icon_dribbble;
             this.bSite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bSite.FlatAppearance.BorderSize = 0;
             this.bSite.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));

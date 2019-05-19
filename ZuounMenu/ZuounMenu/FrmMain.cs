@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ZuounSystem.Menu;
+using ZuounMenu.Menu;
 
-namespace ZuounSystem
+namespace ZuounMenu
 {
     public partial class FrmMain : Form
     {

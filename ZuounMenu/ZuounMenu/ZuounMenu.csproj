@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9298A56E-313E-42DD-9B85-C1A5B186EB12}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ZuounSystem</RootNamespace>
-    <AssemblyName>ZuounSystem</AssemblyName>
+    <RootNamespace>ZuounMenu</RootNamespace>
+    <AssemblyName>ZuounMenu</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

@@ -1,4 +1,4 @@
-﻿namespace ZuounSystem
+﻿namespace ZuounMenu
 {
     partial class FrmLogin
     {
@@ -128,7 +128,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 25);
             this.label3.TabIndex = 0;
-            this.label3.Text = "ZuounSystem";
+            this.label3.Text = "ZuounMenu";
             // 
             // FrmLogin
             // 

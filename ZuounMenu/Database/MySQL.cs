@@ -22,7 +22,7 @@ namespace Database
         public MySQL()
         {
             string ip = "127.0.0.1";
-            string dBase = "zuounsystem";
+            string dBase = "zuounmenu";
             string user = "zuoun";
             string pass = "1234";
 

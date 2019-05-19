@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ZuounSystem
+namespace ZuounMenu
 {
     public partial class FrmLogin : Form
     {
