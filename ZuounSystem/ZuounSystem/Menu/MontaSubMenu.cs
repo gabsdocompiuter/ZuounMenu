@@ -17,12 +17,14 @@ namespace ZuounSystem.Menu
         /// <summary>
         /// Altura do botão
         /// </summary>
-        private readonly int hBtn = 80;
+        private readonly int hBtn = 120;
 
         /// <summary>
         /// Largura do botão
         /// </summary>
-        private readonly int wBtn = 80;
+        private readonly int wBtn = 100;
+
+        private readonly int marginBtn = 5;
 
         /// <summary>
         /// Cor do botão
@@ -46,7 +48,7 @@ namespace ZuounSystem.Menu
 
             //Quantidade de itens no menu
             int qtd = opcoes.Count;
-            int qtdOpcoesLinha = wTela / wBtn;
+            int qtdOpcoesLinha = (wTela / wBtn) - 1;
             int qtdLinhas = qtd / qtdOpcoesLinha;
             if (qtd % qtdOpcoesLinha != 0) qtdLinhas++;
 
@@ -92,7 +94,7 @@ namespace ZuounSystem.Menu
                     }
                     else
                     {
-                        posX = iniPosX + (j * hBtn);
+                        posX = iniPosX + (j * wBtn);
                     }
 
                     MenuPrincipalDTO dto = (MenuPrincipalDTO)opcoes[opc];
@@ -113,6 +115,9 @@ namespace ZuounSystem.Menu
         /// <param name="desc"></param>
         private void AddButton(int posY, int posX, string name, string desc)
         {
+            int bSizeW = wBtn - 2 * marginBtn;
+            int bSizeH = hBtn - 2 * marginBtn;
+
             Button b = new Button
             {
                 Anchor = (AnchorStyles.Left | AnchorStyles.Top),
@@ -122,7 +127,7 @@ namespace ZuounSystem.Menu
                 BackColor = crBtnSt,
                 ForeColor = Color.White,
                 Name = name,
-                Size = new Size(wBtn, hBtn),
+                Size = new Size(bSizeW, bSizeH),
                 TextAlign = ContentAlignment.MiddleLeft,
                 Padding = new Padding(0, 0, 0, 0),
                 TabStop = true,
